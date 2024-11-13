@@ -1,0 +1,23 @@
+# 1. Load data from MySQL
+# In Databricks, use Spark JDBC for data extraction
+jdbc_url = "jdbc:mysql://your-mysql-server:3306/yourdatabase"
+jdbc_properties = {
+    "user": "etluser",
+    "password": "angukanayo24",
+    "driver": "com.mysql.jdbc.Driver"
+}
+
+df = spark.read.jdbc(url=jdbc_url, table="change_records", properties=jdbc_properties)
+display(df)
+
+# 2. Data Cleaning and Transformation
+from pyspark.sql.functions import upper, col
+
+# Clean and standardize status column
+df_cleaned = df.na.drop(subset=["change_id", "description"])
+df_cleaned = df_cleaned.withColumn("status", upper(col("status")))
+
+display(df_cleaned)
+
+# 3. Save cleaned data to Parquet format in Databricks file storage
+df_cleaned.write.format("parquet").save("/mnt/cleaned_data/change_records")

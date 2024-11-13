@@ -1,0 +1,8 @@
+flask
+sqlalchemy
+mysql-connector-python
+databricks-api
+pandas
+numpy
+requests
+Flask-Login

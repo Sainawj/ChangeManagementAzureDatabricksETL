@@ -1,0 +1,14 @@
+# Load cleaned data from Parquet
+df_cleaned = spark.read.format("parquet").load("/mnt/cleaned_data/change_records")
+display(df_cleaned)
+
+# Example: Count changes by status
+status_counts = df_cleaned.groupBy("status").count()
+display(status_counts)
+
+# Example: Calculate the number of changes per day
+from pyspark.sql.functions import to_date
+
+df_by_date = df_cleaned.withColumn("date", to_date("created_at"))
+daily_counts = df_by_date.groupBy("date").count()
+display(daily_counts)
