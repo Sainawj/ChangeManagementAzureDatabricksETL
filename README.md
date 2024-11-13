@@ -3,6 +3,8 @@
 ## Overview
 This project builds a centralized data warehouse for Change Management reporting using Databricks for ETL, MySQL for data storage, and a Flask web app for data visualization. The main goals are to extract data from ITSM databases and Azure DevOps, transform it, and store it in Databricks in Parquet format for easy analysis and reporting.
 
+![Screenshot](databricks.png)
+
 ## Project Structure
 - **Backend**: The Flask app provides API endpoints, handles data ingestion, and integrates with Databricks.
 - **Database**: SQL files define the schema and initial data setup for the MySQL database.
