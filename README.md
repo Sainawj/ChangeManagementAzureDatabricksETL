@@ -46,6 +46,3 @@ This project builds a centralized data warehouse for Change Management reporting
 
 ## Contributing
 Please feel free to open issues or submit pull requests with improvements.
-
-## License
-This project is licensed under the MIT License.
