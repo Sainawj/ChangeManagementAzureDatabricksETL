@@ -18,7 +18,7 @@ This project builds a centralized data warehouse for Change Management reporting
 
 2. Navigate into the project directory:
     ```bash
-    cd ChangeManagementETL
+    cd ChangeManagementazuredatabricksETL
     ```
 
 3. Install the required packages:
