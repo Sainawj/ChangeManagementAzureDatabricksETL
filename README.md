@@ -13,7 +13,7 @@ This project builds a centralized data warehouse for Change Management reporting
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/ChangeManagementETL.git
+    git clone https://github.com/yourusername/ChangeManagementazuredatabricksETL.git
     ```
 
 2. Navigate into the project directory:
